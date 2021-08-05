@@ -5,7 +5,7 @@ import { AppNavigator } from './navigation/AppNavigator';
 export default function () {
   const theme = extendTheme({
     config: {
-      initialColorMode: 'dark',
+      initialColorMode: 'light',
     },
   });
 
