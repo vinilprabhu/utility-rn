@@ -14,36 +14,33 @@ import {
   CheckIcon,
 } from 'native-base';
 import { countryCodes } from '../constants/countryCodes';
+import { Picker } from '@react-native-picker/picker';
 
 export const WhatsappLink = ({ navigation }) => {
-  let [language, setLanguage] = useState("");
 
-  const countryCodeItems = () => {
-    return (<Select.Item label="JavaScript" value="js" />)
-  }
+  const [countryCode, setCountryCode] = useState({
+    name: "India",
+    code: "+91",
+    countryCode: "IN",
+    flag: "🇮🇳"
+  });
 
   return (
-    <Center flex={1}>
-      <Center>
-        <HStack>
-          <Select
-            selectedValue={language}
-            minWidth={200}
-            accessibilityLabel="Select your favorite programming language"
-            placeholder="Select your favorite programming language"
-            onValueChange={(itemValue) => {
-              console.log(itemValue);
-              return setLanguage(itemValue);
-            }}
-            _selectedItem={{
-              bg: "cyan.600",
-              endIcon: <CheckIcon size={4} />,
-            }}
-          >
-            {countryCodes.map((countryCode) => <Select.Item label={`${countryCode.name} ${countryCode.flag}${countryCode.dial_code}`} value={`${countryCode.flag}${countryCode.dial_code}`} />)}
-          </Select>
-        </HStack>
-      </Center>
-    </Center>
+    <Picker
+      enabled={true}
+      mode="dropdown"
+      placeholder="Select City"
+      // onValueChange={formik.handleChange('countryCode')}
+      onValueChange={(itemValue, itemIndex) => {
+        console.log(itemValue, itemIndex, countryCode)
+        if (!itemValue)
+          return;
+        setCountryCode(itemValue)
+      }}
+      selectedValue={countryCode.name + countryCode.code}
+      prompt="ssssss"
+    >
+      {countryCodes.map((item) => <Picker.Item label={`${item.flag}${item.code}`} value={item} key={item.code} />)}
+    </Picker>
   );
 };

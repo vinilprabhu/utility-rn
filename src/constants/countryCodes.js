@@ -1,1448 +1,1448 @@
 export const countryCodes = [
   {
-    "name": "Afghanistan",
-    "dial_code": "+93",
-    "code": "AF",
-    "flag": "🇦🇫"
+    name: "Afghanistan",
+    code: "+93",
+    countryCode: "AF",
+    flag: "🇦🇫"
   },
   {
-    "name": "Albania",
-    "dial_code": "+355",
-    "code": "AL",
-    "flag": "🇦🇱"
+    name: "Albania",
+    code: "+355",
+    countryCode: "AL",
+    flag: "🇦🇱"
   },
   {
-    "name": "Algeria",
-    "dial_code": "+213",
-    "code": "DZ",
-    "flag": "🇩🇿"
+    name: "Algeria",
+    code: "+213",
+    countryCode: "DZ",
+    flag: "🇩🇿"
   },
   {
-    "name": "American Samoa",
-    "dial_code": "+1684",
-    "code": "AS",
-    "flag": "🇦🇸"
+    name: "American Samoa",
+    code: "+1684",
+    countryCode: "AS",
+    flag: "🇦🇸"
   },
   {
-    "name": "Andorra",
-    "dial_code": "+376",
-    "code": "AD",
-    "flag": "🇦🇩"
+    name: "Andorra",
+    code: "+376",
+    countryCode: "AD",
+    flag: "🇦🇩"
   },
   {
-    "name": "Angola",
-    "dial_code": "+244",
-    "code": "AO",
-    "flag": "🇦🇴"
+    name: "Angola",
+    code: "+244",
+    countryCode: "AO",
+    flag: "🇦🇴"
   },
   {
-    "name": "Anguilla",
-    "dial_code": "+1264",
-    "code": "AI",
-    "flag": "🇦🇮"
+    name: "Anguilla",
+    code: "+1264",
+    countryCode: "AI",
+    flag: "🇦🇮"
   },
   {
-    "name": "Antarctica",
-    "dial_code": "+672",
-    "code": "AQ",
-    "flag": "🇦🇶"
+    name: "Antarctica",
+    code: "+672",
+    countryCode: "AQ",
+    flag: "🇦🇶"
   },
   {
-    "name": "Antigua and Barbuda",
-    "dial_code": "+1268",
-    "code": "AG",
-    "flag": "🇦🇬"
+    name: "Antigua and Barbuda",
+    code: "+1268",
+    countryCode: "AG",
+    flag: "🇦🇬"
   },
   {
-    "name": "Argentina",
-    "dial_code": "+54",
-    "code": "AR",
-    "flag": "🇦🇷"
+    name: "Argentina",
+    code: "+54",
+    countryCode: "AR",
+    flag: "🇦🇷"
   },
   {
-    "name": "Armenia",
-    "dial_code": "+374",
-    "code": "AM",
-    "flag": "🇦🇲"
+    name: "Armenia",
+    code: "+374",
+    countryCode: "AM",
+    flag: "🇦🇲"
   },
   {
-    "name": "Aruba",
-    "dial_code": "+297",
-    "code": "AW",
-    "flag": "🇦🇼"
+    name: "Aruba",
+    code: "+297",
+    countryCode: "AW",
+    flag: "🇦🇼"
   },
   {
-    "name": "Australia",
-    "dial_code": "+61",
-    "code": "AU",
-    "flag": "🇦🇺"
+    name: "Australia",
+    code: "+61",
+    countryCode: "AU",
+    flag: "🇦🇺"
   },
   {
-    "name": "Austria",
-    "dial_code": "+43",
-    "code": "AT",
-    "flag": "🇦🇹"
+    name: "Austria",
+    code: "+43",
+    countryCode: "AT",
+    flag: "🇦🇹"
   },
   {
-    "name": "Azerbaijan",
-    "dial_code": "+994",
-    "code": "AZ",
-    "flag": "🇦🇿"
+    name: "Azerbaijan",
+    code: "+994",
+    countryCode: "AZ",
+    flag: "🇦🇿"
   },
   {
-    "name": "Bahamas",
-    "dial_code": "+1242",
-    "code": "BS",
-    "flag": "🇧🇸"
+    name: "Bahamas",
+    code: "+1242",
+    countryCode: "BS",
+    flag: "🇧🇸"
   },
   {
-    "name": "Bahrain",
-    "dial_code": "+973",
-    "code": "BH",
-    "flag": "🇧🇭"
+    name: "Bahrain",
+    code: "+973",
+    countryCode: "BH",
+    flag: "🇧🇭"
   },
   {
-    "name": "Bangladesh",
-    "dial_code": "+880",
-    "code": "BD",
-    "flag": "🇧🇩"
+    name: "Bangladesh",
+    code: "+880",
+    countryCode: "BD",
+    flag: "🇧🇩"
   },
   {
-    "name": "Barbados",
-    "dial_code": "+1246",
-    "code": "BB",
-    "flag": "🇧🇧"
+    name: "Barbados",
+    code: "+1246",
+    countryCode: "BB",
+    flag: "🇧🇧"
   },
   {
-    "name": "Belarus",
-    "dial_code": "+375",
-    "code": "BY",
-    "flag": "🇧🇾"
+    name: "Belarus",
+    code: "+375",
+    countryCode: "BY",
+    flag: "🇧🇾"
   },
   {
-    "name": "Belgium",
-    "dial_code": "+32",
-    "code": "BE",
-    "flag": "🇧🇪"
+    name: "Belgium",
+    code: "+32",
+    countryCode: "BE",
+    flag: "🇧🇪"
   },
   {
-    "name": "Belize",
-    "dial_code": "+501",
-    "code": "BZ",
-    "flag": "🇧🇿"
+    name: "Belize",
+    code: "+501",
+    countryCode: "BZ",
+    flag: "🇧🇿"
   },
   {
-    "name": "Benin",
-    "dial_code": "+229",
-    "code": "BJ",
-    "flag": "🇧🇯"
+    name: "Benin",
+    code: "+229",
+    countryCode: "BJ",
+    flag: "🇧🇯"
   },
   {
-    "name": "Bermuda",
-    "dial_code": "+1441",
-    "code": "BM",
-    "flag": "🇧🇲"
+    name: "Bermuda",
+    code: "+1441",
+    countryCode: "BM",
+    flag: "🇧🇲"
   },
   {
-    "name": "Bhutan",
-    "dial_code": "+975",
-    "code": "BT",
-    "flag": "🇧🇹"
+    name: "Bhutan",
+    code: "+975",
+    countryCode: "BT",
+    flag: "🇧🇹"
   },
   {
-    "name": "Bolivia",
-    "dial_code": "+591",
-    "code": "BO",
-    "flag": "🇧🇴"
+    name: "Bolivia",
+    code: "+591",
+    countryCode: "BO",
+    flag: "🇧🇴"
   },
   {
-    "name": "Bosnia and Herzegovina",
-    "dial_code": "+387",
-    "code": "BA",
-    "flag": "🇧🇦"
+    name: "Bosnia and Herzegovina",
+    code: "+387",
+    countryCode: "BA",
+    flag: "🇧🇦"
   },
   {
-    "name": "Botswana",
-    "dial_code": "+267",
-    "code": "BW",
-    "flag": "🇧🇼"
+    name: "Botswana",
+    code: "+267",
+    countryCode: "BW",
+    flag: "🇧🇼"
   },
   {
-    "name": "Brazil",
-    "dial_code": "+55",
-    "code": "BR",
-    "flag": "🇧🇷"
+    name: "Brazil",
+    code: "+55",
+    countryCode: "BR",
+    flag: "🇧🇷"
   },
   {
-    "name": "British Indian Ocean Territory",
-    "dial_code": "+246",
-    "code": "IO",
-    "flag": "🇮🇴"
+    name: "British Indian Ocean Territory",
+    code: "+246",
+    countryCode: "IO",
+    flag: "🇮🇴"
   },
   {
-    "name": "Brunei Darussalam",
-    "dial_code": "+673",
-    "code": "BN",
-    "flag": "🇧🇳"
+    name: "Brunei Darussalam",
+    code: "+673",
+    countryCode: "BN",
+    flag: "🇧🇳"
   },
   {
-    "name": "Bulgaria",
-    "dial_code": "+359",
-    "code": "BG",
-    "flag": "🇧🇬"
+    name: "Bulgaria",
+    code: "+359",
+    countryCode: "BG",
+    flag: "🇧🇬"
   },
   {
-    "name": "Burkina Faso",
-    "dial_code": "+226",
-    "code": "BF",
-    "flag": "🇧🇫"
+    name: "Burkina Faso",
+    code: "+226",
+    countryCode: "BF",
+    flag: "🇧🇫"
   },
   {
-    "name": "Burundi",
-    "dial_code": "+257",
-    "code": "BI",
-    "flag": "🇧🇮"
+    name: "Burundi",
+    code: "+257",
+    countryCode: "BI",
+    flag: "🇧🇮"
   },
   {
-    "name": "Cambodia",
-    "dial_code": "+855",
-    "code": "KH",
-    "flag": "🇰🇭"
+    name: "Cambodia",
+    code: "+855",
+    countryCode: "KH",
+    flag: "🇰🇭"
   },
   {
-    "name": "Cameroon",
-    "dial_code": "+237",
-    "code": "CM",
-    "flag": "🇨🇲"
+    name: "Cameroon",
+    code: "+237",
+    countryCode: "CM",
+    flag: "🇨🇲"
   },
   {
-    "name": "Canada",
-    "dial_code": "+1",
-    "code": "CA",
-    "flag": "🇨🇦"
+    name: "Canada",
+    code: "+1",
+    countryCode: "CA",
+    flag: "🇨🇦"
   },
   {
-    "name": "Cape Verde",
-    "dial_code": "+238",
-    "code": "CV",
-    "flag": "🇨🇻"
+    name: "Cape Verde",
+    code: "+238",
+    countryCode: "CV",
+    flag: "🇨🇻"
   },
   {
-    "name": "Cayman Islands",
-    "dial_code": "+345",
-    "code": "KY",
-    "flag": "🇰🇾"
+    name: "Cayman Islands",
+    code: "+345",
+    countryCode: "KY",
+    flag: "🇰🇾"
   },
   {
-    "name": "Central African Republic",
-    "dial_code": "+236",
-    "code": "CF",
-    "flag": "🇨🇫"
+    name: "Central African Republic",
+    code: "+236",
+    countryCode: "CF",
+    flag: "🇨🇫"
   },
   {
-    "name": "Chad",
-    "dial_code": "+235",
-    "code": "TD",
-    "flag": "🇹🇩"
+    name: "Chad",
+    code: "+235",
+    countryCode: "TD",
+    flag: "🇹🇩"
   },
   {
-    "name": "Chile",
-    "dial_code": "+56",
-    "code": "CL",
-    "flag": "🇨🇱"
+    name: "Chile",
+    code: "+56",
+    countryCode: "CL",
+    flag: "🇨🇱"
   },
   {
-    "name": "China",
-    "dial_code": "+86",
-    "code": "CN",
-    "flag": "🇨🇳"
+    name: "China",
+    code: "+86",
+    countryCode: "CN",
+    flag: "🇨🇳"
   },
   {
-    "name": "Christmas Island",
-    "dial_code": "+61",
-    "code": "CX",
-    "flag": "🇨🇽"
+    name: "Christmas Island",
+    code: "+61",
+    countryCode: "CX",
+    flag: "🇨🇽"
   },
   {
-    "name": "Cocos (Keeling) Islands",
-    "dial_code": "+61",
-    "code": "CC",
-    "flag": "🇨🇨"
+    name: "Cocos (Keeling) Islands",
+    code: "+61",
+    countryCode: "CC",
+    flag: "🇨🇨"
   },
   {
-    "name": "Colombia",
-    "dial_code": "+57",
-    "code": "CO",
-    "flag": "🇨🇴"
+    name: "Colombia",
+    code: "+57",
+    countryCode: "CO",
+    flag: "🇨🇴"
   },
   {
-    "name": "Comoros",
-    "dial_code": "+269",
-    "code": "KM",
-    "flag": "🇰🇲"
+    name: "Comoros",
+    code: "+269",
+    countryCode: "KM",
+    flag: "🇰🇲"
   },
   {
-    "name": "Congo",
-    "dial_code": "+242",
-    "code": "CG",
-    "flag": "🇨🇬"
+    name: "Congo",
+    code: "+242",
+    countryCode: "CG",
+    flag: "🇨🇬"
   },
   {
-    "name": "Congo, The Democratic Republic of the",
-    "dial_code": "+243",
-    "code": "CD",
-    "flag": "🇨🇩"
+    name: "Congo, The Democratic Republic of the",
+    code: "+243",
+    countryCode: "CD",
+    flag: "🇨🇩"
   },
   {
-    "name": "Cook Islands",
-    "dial_code": "+682",
-    "code": "CK",
-    "flag": "🇨🇰"
+    name: "Cook Islands",
+    code: "+682",
+    countryCode: "CK",
+    flag: "🇨🇰"
   },
   {
-    "name": "Costa Rica",
-    "dial_code": "+506",
-    "code": "CR",
-    "flag": "🇨🇷"
+    name: "Costa Rica",
+    code: "+506",
+    countryCode: "CR",
+    flag: "🇨🇷"
   },
   {
-    "name": "Cote d'Ivoire",
-    "dial_code": "+225",
-    "code": "CI",
-    "flag": "🇨🇮"
+    name: "Cote d'Ivoire",
+    code: "+225",
+    countryCode: "CI",
+    flag: "🇨🇮"
   },
   {
-    "name": "Croatia",
-    "dial_code": "+385",
-    "code": "HR",
-    "flag": "🇭🇷"
+    name: "Croatia",
+    code: "+385",
+    countryCode: "HR",
+    flag: "🇭🇷"
   },
   {
-    "name": "Cuba",
-    "dial_code": "+53",
-    "code": "CU",
-    "flag": "🇨🇺"
+    name: "Cuba",
+    code: "+53",
+    countryCode: "CU",
+    flag: "🇨🇺"
   },
   {
-    "name": "Cyprus",
-    "dial_code": "+537",
-    "code": "CY",
-    "flag": "🇨🇾"
+    name: "Cyprus",
+    code: "+537",
+    countryCode: "CY",
+    flag: "🇨🇾"
   },
   {
-    "name": "Czech Republic",
-    "dial_code": "+420",
-    "code": "CZ",
-    "flag": "🇨🇿"
+    name: "Czech Republic",
+    code: "+420",
+    countryCode: "CZ",
+    flag: "🇨🇿"
   },
   {
-    "name": "Denmark",
-    "dial_code": "+45",
-    "code": "DK",
-    "flag": "🇩🇰"
+    name: "Denmark",
+    code: "+45",
+    countryCode: "DK",
+    flag: "🇩🇰"
   },
   {
-    "name": "Djibouti",
-    "dial_code": "+253",
-    "code": "DJ",
-    "flag": "🇩🇯"
+    name: "Djibouti",
+    code: "+253",
+    countryCode: "DJ",
+    flag: "🇩🇯"
   },
   {
-    "name": "Dominica",
-    "dial_code": "+1767",
-    "code": "DM",
-    "flag": "🇩🇲"
+    name: "Dominica",
+    code: "+1767",
+    countryCode: "DM",
+    flag: "🇩🇲"
   },
   {
-    "name": "Dominican Republic",
-    "dial_code": "+1849",
-    "code": "DO",
-    "flag": "🇩🇴"
+    name: "Dominican Republic",
+    code: "+1849",
+    countryCode: "DO",
+    flag: "🇩🇴"
   },
   {
-    "name": "Ecuador",
-    "dial_code": "+593",
-    "code": "EC",
-    "flag": "🇪🇨"
+    name: "Ecuador",
+    code: "+593",
+    countryCode: "EC",
+    flag: "🇪🇨"
   },
   {
-    "name": "Egypt",
-    "dial_code": "+20",
-    "code": "EG",
-    "flag": "🇪🇬"
+    name: "Egypt",
+    code: "+20",
+    countryCode: "EG",
+    flag: "🇪🇬"
   },
   {
-    "name": "El Salvador",
-    "dial_code": "+503",
-    "code": "SV",
-    "flag": "🇸🇻"
+    name: "El Salvador",
+    code: "+503",
+    countryCode: "SV",
+    flag: "🇸🇻"
   },
   {
-    "name": "Equatorial Guinea",
-    "dial_code": "+240",
-    "code": "GQ",
-    "flag": "🇬🇶"
+    name: "Equatorial Guinea",
+    code: "+240",
+    countryCode: "GQ",
+    flag: "🇬🇶"
   },
   {
-    "name": "Eritrea",
-    "dial_code": "+291",
-    "code": "ER",
-    "flag": "🇪🇷"
+    name: "Eritrea",
+    code: "+291",
+    countryCode: "ER",
+    flag: "🇪🇷"
   },
   {
-    "name": "Estonia",
-    "dial_code": "+372",
-    "code": "EE",
-    "flag": "🇪🇪"
+    name: "Estonia",
+    code: "+372",
+    countryCode: "EE",
+    flag: "🇪🇪"
   },
   {
-    "name": "Ethiopia",
-    "dial_code": "+251",
-    "code": "ET",
-    "flag": "🇪🇹"
+    name: "Ethiopia",
+    code: "+251",
+    countryCode: "ET",
+    flag: "🇪🇹"
   },
   {
-    "name": "Falkland Islands (Malvinas)",
-    "dial_code": "+500",
-    "code": "FK",
-    "flag": "🇫🇰"
+    name: "Falkland Islands (Malvinas)",
+    code: "+500",
+    countryCode: "FK",
+    flag: "🇫🇰"
   },
   {
-    "name": "Faroe Islands",
-    "dial_code": "+298",
-    "code": "FO",
-    "flag": "🇫🇴"
+    name: "Faroe Islands",
+    code: "+298",
+    countryCode: "FO",
+    flag: "🇫🇴"
   },
   {
-    "name": "Fiji",
-    "dial_code": "+679",
-    "code": "FJ",
-    "flag": "🇫🇯"
+    name: "Fiji",
+    code: "+679",
+    countryCode: "FJ",
+    flag: "🇫🇯"
   },
   {
-    "name": "Finland",
-    "dial_code": "+358",
-    "code": "FI",
-    "flag": "🇫🇮"
+    name: "Finland",
+    code: "+358",
+    countryCode: "FI",
+    flag: "🇫🇮"
   },
   {
-    "name": "France",
-    "dial_code": "+33",
-    "code": "FR",
-    "flag": "🇫🇷"
+    name: "France",
+    code: "+33",
+    countryCode: "FR",
+    flag: "🇫🇷"
   },
   {
-    "name": "French Guiana",
-    "dial_code": "+594",
-    "code": "GF",
-    "flag": "🇬🇫"
+    name: "French Guiana",
+    code: "+594",
+    countryCode: "GF",
+    flag: "🇬🇫"
   },
   {
-    "name": "French Polynesia",
-    "dial_code": "+689",
-    "code": "PF",
-    "flag": "🇵🇫"
+    name: "French Polynesia",
+    code: "+689",
+    countryCode: "PF",
+    flag: "🇵🇫"
   },
   {
-    "name": "Gabon",
-    "dial_code": "+241",
-    "code": "GA",
-    "flag": "🇬🇦"
+    name: "Gabon",
+    code: "+241",
+    countryCode: "GA",
+    flag: "🇬🇦"
   },
   {
-    "name": "Gambia",
-    "dial_code": "+220",
-    "code": "GM",
-    "flag": "🇬🇲"
+    name: "Gambia",
+    code: "+220",
+    countryCode: "GM",
+    flag: "🇬🇲"
   },
   {
-    "name": "Georgia",
-    "dial_code": "+995",
-    "code": "GE",
-    "flag": "🇬🇪"
+    name: "Georgia",
+    code: "+995",
+    countryCode: "GE",
+    flag: "🇬🇪"
   },
   {
-    "name": "Germany",
-    "dial_code": "+49",
-    "code": "DE",
-    "flag": "🇩🇪"
+    name: "Germany",
+    code: "+49",
+    countryCode: "DE",
+    flag: "🇩🇪"
   },
   {
-    "name": "Ghana",
-    "dial_code": "+233",
-    "code": "GH",
-    "flag": "🇬🇭"
+    name: "Ghana",
+    code: "+233",
+    countryCode: "GH",
+    flag: "🇬🇭"
   },
   {
-    "name": "Gibraltar",
-    "dial_code": "+350",
-    "code": "GI",
-    "flag": "🇬🇮"
+    name: "Gibraltar",
+    code: "+350",
+    countryCode: "GI",
+    flag: "🇬🇮"
   },
   {
-    "name": "Greece",
-    "dial_code": "+30",
-    "code": "GR",
-    "flag": "🇬🇷"
+    name: "Greece",
+    code: "+30",
+    countryCode: "GR",
+    flag: "🇬🇷"
   },
   {
-    "name": "Greenland",
-    "dial_code": "+299",
-    "code": "GL",
-    "flag": "🇬🇱"
+    name: "Greenland",
+    code: "+299",
+    countryCode: "GL",
+    flag: "🇬🇱"
   },
   {
-    "name": "Grenada",
-    "dial_code": "+1473",
-    "code": "GD",
-    "flag": "🇬🇩"
+    name: "Grenada",
+    code: "+1473",
+    countryCode: "GD",
+    flag: "🇬🇩"
   },
   {
-    "name": "Guadeloupe",
-    "dial_code": "+590",
-    "code": "GP",
-    "flag": "🇬🇵"
+    name: "Guadeloupe",
+    code: "+590",
+    countryCode: "GP",
+    flag: "🇬🇵"
   },
   {
-    "name": "Guam",
-    "dial_code": "+1671",
-    "code": "GU",
-    "flag": "🇬🇺"
+    name: "Guam",
+    code: "+1671",
+    countryCode: "GU",
+    flag: "🇬🇺"
   },
   {
-    "name": "Guatemala",
-    "dial_code": "+502",
-    "code": "GT",
-    "flag": "🇬🇹"
+    name: "Guatemala",
+    code: "+502",
+    countryCode: "GT",
+    flag: "🇬🇹"
   },
   {
-    "name": "Guernsey",
-    "dial_code": "+44",
-    "code": "GG",
-    "flag": "🇬🇬"
+    name: "Guernsey",
+    code: "+44",
+    countryCode: "GG",
+    flag: "🇬🇬"
   },
   {
-    "name": "Guinea",
-    "dial_code": "+224",
-    "code": "GN",
-    "flag": "🇬🇳"
+    name: "Guinea",
+    code: "+224",
+    countryCode: "GN",
+    flag: "🇬🇳"
   },
   {
-    "name": "Guinea-Bissau",
-    "dial_code": "+245",
-    "code": "GW",
-    "flag": "🇬🇼"
+    name: "Guinea-Bissau",
+    code: "+245",
+    countryCode: "GW",
+    flag: "🇬🇼"
   },
   {
-    "name": "Guyana",
-    "dial_code": "+595",
-    "code": "GY",
-    "flag": "🇬🇾"
+    name: "Guyana",
+    code: "+595",
+    countryCode: "GY",
+    flag: "🇬🇾"
   },
   {
-    "name": "Haiti",
-    "dial_code": "+509",
-    "code": "HT",
-    "flag": "🇭🇹"
+    name: "Haiti",
+    code: "+509",
+    countryCode: "HT",
+    flag: "🇭🇹"
   },
   {
-    "name": "Holy See (Vatican City State)",
-    "dial_code": "+379",
-    "code": "VA",
-    "flag": "🇻🇦"
+    name: "Holy See (Vatican City State)",
+    code: "+379",
+    countryCode: "VA",
+    flag: "🇻🇦"
   },
   {
-    "name": "Honduras",
-    "dial_code": "+504",
-    "code": "HN",
-    "flag": "🇭🇳"
+    name: "Honduras",
+    code: "+504",
+    countryCode: "HN",
+    flag: "🇭🇳"
   },
   {
-    "name": "Hong Kong",
-    "dial_code": "+852",
-    "code": "HK",
-    "flag": "🇭🇰"
+    name: "Hong Kong",
+    code: "+852",
+    countryCode: "HK",
+    flag: "🇭🇰"
   },
   {
-    "name": "Hungary",
-    "dial_code": "+36",
-    "code": "HU",
-    "flag": "🇭🇺"
+    name: "Hungary",
+    code: "+36",
+    countryCode: "HU",
+    flag: "🇭🇺"
   },
   {
-    "name": "Iceland",
-    "dial_code": "+354",
-    "code": "IS",
-    "flag": "🇮🇸"
+    name: "Iceland",
+    code: "+354",
+    countryCode: "IS",
+    flag: "🇮🇸"
   },
   {
-    "name": "India",
-    "dial_code": "+91",
-    "code": "IN",
-    "flag": "🇮🇳"
+    name: "India",
+    code: "+91",
+    countryCode: "IN",
+    flag: "🇮🇳"
   },
   {
-    "name": "Indonesia",
-    "dial_code": "+62",
-    "code": "ID",
-    "flag": "🇮🇩"
+    name: "Indonesia",
+    code: "+62",
+    countryCode: "ID",
+    flag: "🇮🇩"
   },
   {
-    "name": "Iran, Islamic Republic of",
-    "dial_code": "+98",
-    "code": "IR",
-    "flag": "🇮🇷"
+    name: "Iran, Islamic Republic of",
+    code: "+98",
+    countryCode: "IR",
+    flag: "🇮🇷"
   },
   {
-    "name": "Iraq",
-    "dial_code": "+964",
-    "code": "IQ",
-    "flag": "🇮🇶"
+    name: "Iraq",
+    code: "+964",
+    countryCode: "IQ",
+    flag: "🇮🇶"
   },
   {
-    "name": "Ireland",
-    "dial_code": "+353",
-    "code": "IE",
-    "flag": "🇮🇪"
+    name: "Ireland",
+    code: "+353",
+    countryCode: "IE",
+    flag: "🇮🇪"
   },
   {
-    "name": "Isle of Man",
-    "dial_code": "+44",
-    "code": "IM",
-    "flag": "🇮🇲"
+    name: "Isle of Man",
+    code: "+44",
+    countryCode: "IM",
+    flag: "🇮🇲"
   },
   {
-    "name": "Israel",
-    "dial_code": "+972",
-    "code": "IL",
-    "flag": "🇮🇱"
+    name: "Israel",
+    code: "+972",
+    countryCode: "IL",
+    flag: "🇮🇱"
   },
   {
-    "name": "Italy",
-    "dial_code": "+39",
-    "code": "IT",
-    "flag": "🇮🇹"
+    name: "Italy",
+    code: "+39",
+    countryCode: "IT",
+    flag: "🇮🇹"
   },
   {
-    "name": "Jamaica",
-    "dial_code": "+1876",
-    "code": "JM",
-    "flag": "🇯🇲"
+    name: "Jamaica",
+    code: "+1876",
+    countryCode: "JM",
+    flag: "🇯🇲"
   },
   {
-    "name": "Japan",
-    "dial_code": "+81",
-    "code": "JP",
-    "flag": "🇯🇵"
+    name: "Japan",
+    code: "+81",
+    countryCode: "JP",
+    flag: "🇯🇵"
   },
   {
-    "name": "Jersey",
-    "dial_code": "+44",
-    "code": "JE",
-    "flag": "🇯🇪"
+    name: "Jersey",
+    code: "+44",
+    countryCode: "JE",
+    flag: "🇯🇪"
   },
   {
-    "name": "Jordan",
-    "dial_code": "+962",
-    "code": "JO",
-    "flag": "🇯🇴"
+    name: "Jordan",
+    code: "+962",
+    countryCode: "JO",
+    flag: "🇯🇴"
   },
   {
-    "name": "Kazakhstan",
-    "dial_code": "+77",
-    "code": "KZ",
-    "flag": "🇰🇿"
+    name: "Kazakhstan",
+    code: "+77",
+    countryCode: "KZ",
+    flag: "🇰🇿"
   },
   {
-    "name": "Kenya",
-    "dial_code": "+254",
-    "code": "KE",
-    "flag": "🇰🇪"
+    name: "Kenya",
+    code: "+254",
+    countryCode: "KE",
+    flag: "🇰🇪"
   },
   {
-    "name": "Kiribati",
-    "dial_code": "+686",
-    "code": "KI",
-    "flag": "🇰🇮"
+    name: "Kiribati",
+    code: "+686",
+    countryCode: "KI",
+    flag: "🇰🇮"
   },
   {
-    "name": "Korea, Democratic People's Republic of",
-    "dial_code": "+850",
-    "code": "KP",
-    "flag": "🇰🇵"
+    name: "Korea, Democratic People's Republic of",
+    code: "+850",
+    countryCode: "KP",
+    flag: "🇰🇵"
   },
   {
-    "name": "Korea, Republic of",
-    "dial_code": "+82",
-    "code": "KR",
-    "flag": "🇰🇷"
+    name: "Korea, Republic of",
+    code: "+82",
+    countryCode: "KR",
+    flag: "🇰🇷"
   },
   {
-    "name": "Kuwait",
-    "dial_code": "+965",
-    "code": "KW",
-    "flag": "🇰🇼"
+    name: "Kuwait",
+    code: "+965",
+    countryCode: "KW",
+    flag: "🇰🇼"
   },
   {
-    "name": "Kyrgyzstan",
-    "dial_code": "+996",
-    "code": "KG",
-    "flag": "🇰🇬"
+    name: "Kyrgyzstan",
+    code: "+996",
+    countryCode: "KG",
+    flag: "🇰🇬"
   },
   {
-    "name": "Lao People's Democratic Republic",
-    "dial_code": "+856",
-    "code": "LA",
-    "flag": "🇱🇦"
+    name: "Lao People's Democratic Republic",
+    code: "+856",
+    countryCode: "LA",
+    flag: "🇱🇦"
   },
   {
-    "name": "Latvia",
-    "dial_code": "+371",
-    "code": "LV",
-    "flag": "🇱🇻"
+    name: "Latvia",
+    code: "+371",
+    countryCode: "LV",
+    flag: "🇱🇻"
   },
   {
-    "name": "Lebanon",
-    "dial_code": "+961",
-    "code": "LB",
-    "flag": "🇱🇧"
+    name: "Lebanon",
+    code: "+961",
+    countryCode: "LB",
+    flag: "🇱🇧"
   },
   {
-    "name": "Lesotho",
-    "dial_code": "+266",
-    "code": "LS",
-    "flag": "🇱🇸"
+    name: "Lesotho",
+    code: "+266",
+    countryCode: "LS",
+    flag: "🇱🇸"
   },
   {
-    "name": "Liberia",
-    "dial_code": "+231",
-    "code": "LR",
-    "flag": "🇱🇷"
+    name: "Liberia",
+    code: "+231",
+    countryCode: "LR",
+    flag: "🇱🇷"
   },
   {
-    "name": "Libyan Arab Jamahiriya",
-    "dial_code": "+218",
-    "code": "LY",
-    "flag": "🇱🇾"
+    name: "Libyan Arab Jamahiriya",
+    code: "+218",
+    countryCode: "LY",
+    flag: "🇱🇾"
   },
   {
-    "name": "Liechtenstein",
-    "dial_code": "+423",
-    "code": "LI",
-    "flag": "🇱🇮"
+    name: "Liechtenstein",
+    code: "+423",
+    countryCode: "LI",
+    flag: "🇱🇮"
   },
   {
-    "name": "Lithuania",
-    "dial_code": "+370",
-    "code": "LT",
-    "flag": "🇱🇹"
+    name: "Lithuania",
+    code: "+370",
+    countryCode: "LT",
+    flag: "🇱🇹"
   },
   {
-    "name": "Luxembourg",
-    "dial_code": "+352",
-    "code": "LU",
-    "flag": "🇱🇺"
+    name: "Luxembourg",
+    code: "+352",
+    countryCode: "LU",
+    flag: "🇱🇺"
   },
   {
-    "name": "Macao",
-    "dial_code": "+853",
-    "code": "MO",
-    "flag": "🇲🇴"
+    name: "Macao",
+    code: "+853",
+    countryCode: "MO",
+    flag: "🇲🇴"
   },
   {
-    "name": "Macedonia, The Former Yugoslav Republic of",
-    "dial_code": "+389",
-    "code": "MK",
-    "flag": "🇲🇰"
+    name: "Macedonia, The Former Yugoslav Republic of",
+    code: "+389",
+    countryCode: "MK",
+    flag: "🇲🇰"
   },
   {
-    "name": "Madagascar",
-    "dial_code": "+261",
-    "code": "MG",
-    "flag": "🇲🇬"
+    name: "Madagascar",
+    code: "+261",
+    countryCode: "MG",
+    flag: "🇲🇬"
   },
   {
-    "name": "Malawi",
-    "dial_code": "+265",
-    "code": "MW",
-    "flag": "🇲🇼"
+    name: "Malawi",
+    code: "+265",
+    countryCode: "MW",
+    flag: "🇲🇼"
   },
   {
-    "name": "Malaysia",
-    "dial_code": "+60",
-    "code": "MY",
-    "flag": "🇲🇾"
+    name: "Malaysia",
+    code: "+60",
+    countryCode: "MY",
+    flag: "🇲🇾"
   },
   {
-    "name": "Maldives",
-    "dial_code": "+960",
-    "code": "MV",
-    "flag": "🇲🇻"
+    name: "Maldives",
+    code: "+960",
+    countryCode: "MV",
+    flag: "🇲🇻"
   },
   {
-    "name": "Mali",
-    "dial_code": "+223",
-    "code": "ML",
-    "flag": "🇲🇱"
+    name: "Mali",
+    code: "+223",
+    countryCode: "ML",
+    flag: "🇲🇱"
   },
   {
-    "name": "Malta",
-    "dial_code": "+356",
-    "code": "MT",
-    "flag": "🇲🇹"
+    name: "Malta",
+    code: "+356",
+    countryCode: "MT",
+    flag: "🇲🇹"
   },
   {
-    "name": "Marshall Islands",
-    "dial_code": "+692",
-    "code": "MH",
-    "flag": "🇲🇭"
+    name: "Marshall Islands",
+    code: "+692",
+    countryCode: "MH",
+    flag: "🇲🇭"
   },
   {
-    "name": "Martinique",
-    "dial_code": "+596",
-    "code": "MQ",
-    "flag": "🇲🇶"
+    name: "Martinique",
+    code: "+596",
+    countryCode: "MQ",
+    flag: "🇲🇶"
   },
   {
-    "name": "Mauritania",
-    "dial_code": "+222",
-    "code": "MR",
-    "flag": "🇲🇷"
+    name: "Mauritania",
+    code: "+222",
+    countryCode: "MR",
+    flag: "🇲🇷"
   },
   {
-    "name": "Mauritius",
-    "dial_code": "+230",
-    "code": "MU",
-    "flag": "🇲🇺"
+    name: "Mauritius",
+    code: "+230",
+    countryCode: "MU",
+    flag: "🇲🇺"
   },
   {
-    "name": "Mayotte",
-    "dial_code": "+262",
-    "code": "YT",
-    "flag": "🇾🇹"
+    name: "Mayotte",
+    code: "+262",
+    countryCode: "YT",
+    flag: "🇾🇹"
   },
   {
-    "name": "Mexico",
-    "dial_code": "+52",
-    "code": "MX",
-    "flag": "🇲🇽"
+    name: "Mexico",
+    code: "+52",
+    countryCode: "MX",
+    flag: "🇲🇽"
   },
   {
-    "name": "Micronesia, Federated States of",
-    "dial_code": "+691",
-    "code": "FM",
-    "flag": "🇫🇲"
+    name: "Micronesia, Federated States of",
+    code: "+691",
+    countryCode: "FM",
+    flag: "🇫🇲"
   },
   {
-    "name": "Moldova, Republic of",
-    "dial_code": "+373",
-    "code": "MD",
-    "flag": "🇲🇩"
+    name: "Moldova, Republic of",
+    code: "+373",
+    countryCode: "MD",
+    flag: "🇲🇩"
   },
   {
-    "name": "Monaco",
-    "dial_code": "+377",
-    "code": "MC",
-    "flag": "🇲🇨"
+    name: "Monaco",
+    code: "+377",
+    countryCode: "MC",
+    flag: "🇲🇨"
   },
   {
-    "name": "Mongolia",
-    "dial_code": "+976",
-    "code": "MN",
-    "flag": "🇲🇳"
+    name: "Mongolia",
+    code: "+976",
+    countryCode: "MN",
+    flag: "🇲🇳"
   },
   {
-    "name": "Montenegro",
-    "dial_code": "+382",
-    "code": "ME",
-    "flag": "🇲🇪"
+    name: "Montenegro",
+    code: "+382",
+    countryCode: "ME",
+    flag: "🇲🇪"
   },
   {
-    "name": "Montserrat",
-    "dial_code": "+1664",
-    "code": "MS",
-    "flag": "🇲🇸"
+    name: "Montserrat",
+    code: "+1664",
+    countryCode: "MS",
+    flag: "🇲🇸"
   },
   {
-    "name": "Morocco",
-    "dial_code": "+212",
-    "code": "MA",
-    "flag": "🇲🇦"
+    name: "Morocco",
+    code: "+212",
+    countryCode: "MA",
+    flag: "🇲🇦"
   },
   {
-    "name": "Mozambique",
-    "dial_code": "+258",
-    "code": "MZ",
-    "flag": "🇲🇿"
+    name: "Mozambique",
+    code: "+258",
+    countryCode: "MZ",
+    flag: "🇲🇿"
   },
   {
-    "name": "Myanmar",
-    "dial_code": "+95",
-    "code": "MM",
-    "flag": "🇲🇲"
+    name: "Myanmar",
+    code: "+95",
+    countryCode: "MM",
+    flag: "🇲🇲"
   },
   {
-    "name": "Namibia",
-    "dial_code": "+264",
-    "code": "NA",
-    "flag": "🇳🇦"
+    name: "Namibia",
+    code: "+264",
+    countryCode: "NA",
+    flag: "🇳🇦"
   },
   {
-    "name": "Nauru",
-    "dial_code": "+674",
-    "code": "NR",
-    "flag": "🇳🇷"
+    name: "Nauru",
+    code: "+674",
+    countryCode: "NR",
+    flag: "🇳🇷"
   },
   {
-    "name": "Nepal",
-    "dial_code": "+977",
-    "code": "NP",
-    "flag": "🇳🇵"
+    name: "Nepal",
+    code: "+977",
+    countryCode: "NP",
+    flag: "🇳🇵"
   },
   {
-    "name": "Netherlands",
-    "dial_code": "+31",
-    "code": "NL",
-    "flag": "🇳🇱"
+    name: "Netherlands",
+    code: "+31",
+    countryCode: "NL",
+    flag: "🇳🇱"
   },
   {
-    "name": "Netherlands Antilles",
-    "dial_code": "+599",
-    "code": "AN",
-    "flag": "🇦🇳"
+    name: "Netherlands Antilles",
+    code: "+599",
+    countryCode: "AN",
+    flag: "🇦🇳"
   },
   {
-    "name": "New Caledonia",
-    "dial_code": "+687",
-    "code": "NC",
-    "flag": "🇳🇨"
+    name: "New Caledonia",
+    code: "+687",
+    countryCode: "NC",
+    flag: "🇳🇨"
   },
   {
-    "name": "New Zealand",
-    "dial_code": "+64",
-    "code": "NZ",
-    "flag": "🇳🇿"
+    name: "New Zealand",
+    code: "+64",
+    countryCode: "NZ",
+    flag: "🇳🇿"
   },
   {
-    "name": "Nicaragua",
-    "dial_code": "+505",
-    "code": "NI",
-    "flag": "🇳🇮"
+    name: "Nicaragua",
+    code: "+505",
+    countryCode: "NI",
+    flag: "🇳🇮"
   },
   {
-    "name": "Niger",
-    "dial_code": "+227",
-    "code": "NE",
-    "flag": "🇳🇪"
+    name: "Niger",
+    code: "+227",
+    countryCode: "NE",
+    flag: "🇳🇪"
   },
   {
-    "name": "Nigeria",
-    "dial_code": "+234",
-    "code": "NG",
-    "flag": "🇳🇬"
+    name: "Nigeria",
+    code: "+234",
+    countryCode: "NG",
+    flag: "🇳🇬"
   },
   {
-    "name": "Niue",
-    "dial_code": "+683",
-    "code": "NU",
-    "flag": "🇳🇺"
+    name: "Niue",
+    code: "+683",
+    countryCode: "NU",
+    flag: "🇳🇺"
   },
   {
-    "name": "Norfolk Island",
-    "dial_code": "+672",
-    "code": "NF",
-    "flag": "🇳🇫"
+    name: "Norfolk Island",
+    code: "+672",
+    countryCode: "NF",
+    flag: "🇳🇫"
   },
   {
-    "name": "Northern Mariana Islands",
-    "dial_code": "+1670",
-    "code": "MP",
-    "flag": "🇲🇵"
+    name: "Northern Mariana Islands",
+    code: "+1670",
+    countryCode: "MP",
+    flag: "🇲🇵"
   },
   {
-    "name": "Norway",
-    "dial_code": "+47",
-    "code": "NO",
-    "flag": "🇳🇴"
+    name: "Norway",
+    code: "+47",
+    countryCode: "NO",
+    flag: "🇳🇴"
   },
   {
-    "name": "Oman",
-    "dial_code": "+968",
-    "code": "OM",
-    "flag": "🇴🇲"
+    name: "Oman",
+    code: "+968",
+    countryCode: "OM",
+    flag: "🇴🇲"
   },
   {
-    "name": "Pakistan",
-    "dial_code": "+92",
-    "code": "PK",
-    "flag": "🇵🇰"
+    name: "Pakistan",
+    code: "+92",
+    countryCode: "PK",
+    flag: "🇵🇰"
   },
   {
-    "name": "Palau",
-    "dial_code": "+680",
-    "code": "PW",
-    "flag": "🇵🇼"
+    name: "Palau",
+    code: "+680",
+    countryCode: "PW",
+    flag: "🇵🇼"
   },
   {
-    "name": "Palestinian Territory, Occupied",
-    "dial_code": "+970",
-    "code": "PS",
-    "flag": "🇵🇸"
+    name: "Palestinian Territory, Occupied",
+    code: "+970",
+    countryCode: "PS",
+    flag: "🇵🇸"
   },
   {
-    "name": "Panama",
-    "dial_code": "+507",
-    "code": "PA",
-    "flag": "🇵🇦"
+    name: "Panama",
+    code: "+507",
+    countryCode: "PA",
+    flag: "🇵🇦"
   },
   {
-    "name": "Papua New Guinea",
-    "dial_code": "+675",
-    "code": "PG",
-    "flag": "🇵🇬"
+    name: "Papua New Guinea",
+    code: "+675",
+    countryCode: "PG",
+    flag: "🇵🇬"
   },
   {
-    "name": "Paraguay",
-    "dial_code": "+595",
-    "code": "PY",
-    "flag": "🇵🇾"
+    name: "Paraguay",
+    code: "+595",
+    countryCode: "PY",
+    flag: "🇵🇾"
   },
   {
-    "name": "Peru",
-    "dial_code": "+51",
-    "code": "PE",
-    "flag": "🇵🇪"
+    name: "Peru",
+    code: "+51",
+    countryCode: "PE",
+    flag: "🇵🇪"
   },
   {
-    "name": "Philippines",
-    "dial_code": "+63",
-    "code": "PH",
-    "flag": "🇵🇭"
+    name: "Philippines",
+    code: "+63",
+    countryCode: "PH",
+    flag: "🇵🇭"
   },
   {
-    "name": "Pitcairn",
-    "dial_code": "+872",
-    "code": "PN",
-    "flag": "🇵🇳"
+    name: "Pitcairn",
+    code: "+872",
+    countryCode: "PN",
+    flag: "🇵🇳"
   },
   {
-    "name": "Poland",
-    "dial_code": "+48",
-    "code": "PL",
-    "flag": "🇵🇱"
+    name: "Poland",
+    code: "+48",
+    countryCode: "PL",
+    flag: "🇵🇱"
   },
   {
-    "name": "Portugal",
-    "dial_code": "+351",
-    "code": "PT",
-    "flag": "🇵🇹"
+    name: "Portugal",
+    code: "+351",
+    countryCode: "PT",
+    flag: "🇵🇹"
   },
   {
-    "name": "Puerto Rico",
-    "dial_code": "+1939",
-    "code": "PR",
-    "flag": "🇵🇷"
+    name: "Puerto Rico",
+    code: "+1939",
+    countryCode: "PR",
+    flag: "🇵🇷"
   },
   {
-    "name": "Qatar",
-    "dial_code": "+974",
-    "code": "QA",
-    "flag": "🇶🇦"
+    name: "Qatar",
+    code: "+974",
+    countryCode: "QA",
+    flag: "🇶🇦"
   },
   {
-    "name": "Romania",
-    "dial_code": "+40",
-    "code": "RO",
-    "flag": "🇷🇴"
+    name: "Romania",
+    code: "+40",
+    countryCode: "RO",
+    flag: "🇷🇴"
   },
   {
-    "name": "Russia",
-    "dial_code": "+7",
-    "code": "RU",
-    "flag": "🇷🇺"
+    name: "Russia",
+    code: "+7",
+    countryCode: "RU",
+    flag: "🇷🇺"
   },
   {
-    "name": "Rwanda",
-    "dial_code": "+250",
-    "code": "RW",
-    "flag": "🇷🇼"
+    name: "Rwanda",
+    code: "+250",
+    countryCode: "RW",
+    flag: "🇷🇼"
   },
   {
-    "name": "Réunion",
-    "dial_code": "+262",
-    "code": "RE",
-    "flag": "🇷🇪"
+    name: "Réunion",
+    code: "+262",
+    countryCode: "RE",
+    flag: "🇷🇪"
   },
   {
-    "name": "Saint Barthélemy",
-    "dial_code": "+590",
-    "code": "BL",
-    "flag": "🇧🇱"
+    name: "Saint Barthélemy",
+    code: "+590",
+    countryCode: "BL",
+    flag: "🇧🇱"
   },
   {
-    "name": "Saint Helena, Ascension and Tristan Da Cunha",
-    "dial_code": "+290",
-    "code": "SH",
-    "flag": "🇸🇭"
+    name: "Saint Helena, Ascension and Tristan Da Cunha",
+    code: "+290",
+    countryCode: "SH",
+    flag: "🇸🇭"
   },
   {
-    "name": "Saint Kitts and Nevis",
-    "dial_code": "+1869",
-    "code": "KN",
-    "flag": "🇰🇳"
+    name: "Saint Kitts and Nevis",
+    code: "+1869",
+    countryCode: "KN",
+    flag: "🇰🇳"
   },
   {
-    "name": "Saint Lucia",
-    "dial_code": "+1758",
-    "code": "LC",
-    "flag": "🇱🇨"
+    name: "Saint Lucia",
+    code: "+1758",
+    countryCode: "LC",
+    flag: "🇱🇨"
   },
   {
-    "name": "Saint Martin",
-    "dial_code": "+590",
-    "code": "MF",
-    "flag": "🇲🇫"
+    name: "Saint Martin",
+    code: "+590",
+    countryCode: "MF",
+    flag: "🇲🇫"
   },
   {
-    "name": "Saint Pierre and Miquelon",
-    "dial_code": "+508",
-    "code": "PM",
-    "flag": "🇵🇲"
+    name: "Saint Pierre and Miquelon",
+    code: "+508",
+    countryCode: "PM",
+    flag: "🇵🇲"
   },
   {
-    "name": "Saint Vincent and the Grenadines",
-    "dial_code": "+1784",
-    "code": "VC",
-    "flag": "🇻🇨"
+    name: "Saint Vincent and the Grenadines",
+    code: "+1784",
+    countryCode: "VC",
+    flag: "🇻🇨"
   },
   {
-    "name": "Samoa",
-    "dial_code": "+685",
-    "code": "WS",
-    "flag": "🇼🇸"
+    name: "Samoa",
+    code: "+685",
+    countryCode: "WS",
+    flag: "🇼🇸"
   },
   {
-    "name": "San Marino",
-    "dial_code": "+378",
-    "code": "SM",
-    "flag": "🇸🇲"
+    name: "San Marino",
+    code: "+378",
+    countryCode: "SM",
+    flag: "🇸🇲"
   },
   {
-    "name": "Sao Tome and Principe",
-    "dial_code": "+239",
-    "code": "ST",
-    "flag": "🇸🇹"
+    name: "Sao Tome and Principe",
+    code: "+239",
+    countryCode: "ST",
+    flag: "🇸🇹"
   },
   {
-    "name": "Saudi Arabia",
-    "dial_code": "+966",
-    "code": "SA",
-    "flag": "🇸🇦"
+    name: "Saudi Arabia",
+    code: "+966",
+    countryCode: "SA",
+    flag: "🇸🇦"
   },
   {
-    "name": "Senegal",
-    "dial_code": "+221",
-    "code": "SN",
-    "flag": "🇸🇳"
+    name: "Senegal",
+    code: "+221",
+    countryCode: "SN",
+    flag: "🇸🇳"
   },
   {
-    "name": "Serbia",
-    "dial_code": "+381",
-    "code": "RS",
-    "flag": "🇷🇸"
+    name: "Serbia",
+    code: "+381",
+    countryCode: "RS",
+    flag: "🇷🇸"
   },
   {
-    "name": "Seychelles",
-    "dial_code": "+248",
-    "code": "SC",
-    "flag": "🇸🇨"
+    name: "Seychelles",
+    code: "+248",
+    countryCode: "SC",
+    flag: "🇸🇨"
   },
   {
-    "name": "Sierra Leone",
-    "dial_code": "+232",
-    "code": "SL",
-    "flag": "🇸🇱"
+    name: "Sierra Leone",
+    code: "+232",
+    countryCode: "SL",
+    flag: "🇸🇱"
   },
   {
-    "name": "Singapore",
-    "dial_code": "+65",
-    "code": "SG",
-    "flag": "🇸🇬"
+    name: "Singapore",
+    code: "+65",
+    countryCode: "SG",
+    flag: "🇸🇬"
   },
   {
-    "name": "Slovakia",
-    "dial_code": "+421",
-    "code": "SK",
-    "flag": "🇸🇰"
+    name: "Slovakia",
+    code: "+421",
+    countryCode: "SK",
+    flag: "🇸🇰"
   },
   {
-    "name": "Slovenia",
-    "dial_code": "+386",
-    "code": "SI",
-    "flag": "🇸🇮"
+    name: "Slovenia",
+    code: "+386",
+    countryCode: "SI",
+    flag: "🇸🇮"
   },
   {
-    "name": "Solomon Islands",
-    "dial_code": "+677",
-    "code": "SB",
-    "flag": "🇸🇧"
+    name: "Solomon Islands",
+    code: "+677",
+    countryCode: "SB",
+    flag: "🇸🇧"
   },
   {
-    "name": "Somalia",
-    "dial_code": "+252",
-    "code": "SO",
-    "flag": "🇸🇴"
+    name: "Somalia",
+    code: "+252",
+    countryCode: "SO",
+    flag: "🇸🇴"
   },
   {
-    "name": "South Africa",
-    "dial_code": "+27",
-    "code": "ZA",
-    "flag": "🇿🇦"
+    name: "South Africa",
+    code: "+27",
+    countryCode: "ZA",
+    flag: "🇿🇦"
   },
   {
-    "name": "South Georgia and the South Sandwich Islands",
-    "dial_code": "+500",
-    "code": "GS",
-    "flag": "🇬🇸"
+    name: "South Georgia and the South Sandwich Islands",
+    code: "+500",
+    countryCode: "GS",
+    flag: "🇬🇸"
   },
   {
-    "name": "Spain",
-    "dial_code": "+34",
-    "code": "ES",
-    "flag": "🇪🇸"
+    name: "Spain",
+    code: "+34",
+    countryCode: "ES",
+    flag: "🇪🇸"
   },
   {
-    "name": "Sri Lanka",
-    "dial_code": "+94",
-    "code": "LK",
-    "flag": "🇱🇰"
+    name: "Sri Lanka",
+    code: "+94",
+    countryCode: "LK",
+    flag: "🇱🇰"
   },
   {
-    "name": "Sudan",
-    "dial_code": "+249",
-    "code": "SD",
-    "flag": "🇸🇩"
+    name: "Sudan",
+    code: "+249",
+    countryCode: "SD",
+    flag: "🇸🇩"
   },
   {
-    "name": "Suriname",
-    "dial_code": "+597",
-    "code": "SR",
-    "flag": "🇸🇷"
+    name: "Suriname",
+    code: "+597",
+    countryCode: "SR",
+    flag: "🇸🇷"
   },
   {
-    "name": "Svalbard and Jan Mayen",
-    "dial_code": "+47",
-    "code": "SJ",
-    "flag": "🇸🇯"
+    name: "Svalbard and Jan Mayen",
+    code: "+47",
+    countryCode: "SJ",
+    flag: "🇸🇯"
   },
   {
-    "name": "Swaziland",
-    "dial_code": "+268",
-    "code": "SZ",
-    "flag": "🇸🇿"
+    name: "Swaziland",
+    code: "+268",
+    countryCode: "SZ",
+    flag: "🇸🇿"
   },
   {
-    "name": "Sweden",
-    "dial_code": "+46",
-    "code": "SE",
-    "flag": "🇸🇪"
+    name: "Sweden",
+    code: "+46",
+    countryCode: "SE",
+    flag: "🇸🇪"
   },
   {
-    "name": "Switzerland",
-    "dial_code": "+41",
-    "code": "CH",
-    "flag": "🇨🇭"
+    name: "Switzerland",
+    code: "+41",
+    countryCode: "CH",
+    flag: "🇨🇭"
   },
   {
-    "name": "Syrian Arab Republic",
-    "dial_code": "+963",
-    "code": "SY",
-    "flag": "🇸🇾"
+    name: "Syrian Arab Republic",
+    code: "+963",
+    countryCode: "SY",
+    flag: "🇸🇾"
   },
   {
-    "name": "Taiwan, Province of China",
-    "dial_code": "+886",
-    "code": "TW",
-    "flag": "🇹🇼"
+    name: "Taiwan, Province of China",
+    code: "+886",
+    countryCode: "TW",
+    flag: "🇹🇼"
   },
   {
-    "name": "Tajikistan",
-    "dial_code": "+992",
-    "code": "TJ",
-    "flag": "🇹🇯"
+    name: "Tajikistan",
+    code: "+992",
+    countryCode: "TJ",
+    flag: "🇹🇯"
   },
   {
-    "name": "Tanzania, United Republic of",
-    "dial_code": "+255",
-    "code": "TZ",
-    "flag": "🇹🇿"
+    name: "Tanzania, United Republic of",
+    code: "+255",
+    countryCode: "TZ",
+    flag: "🇹🇿"
   },
   {
-    "name": "Thailand",
-    "dial_code": "+66",
-    "code": "TH",
-    "flag": "🇹🇭"
+    name: "Thailand",
+    code: "+66",
+    countryCode: "TH",
+    flag: "🇹🇭"
   },
   {
-    "name": "Timor-Leste",
-    "dial_code": "+670",
-    "code": "TL",
-    "flag": "🇹🇱"
+    name: "Timor-Leste",
+    code: "+670",
+    countryCode: "TL",
+    flag: "🇹🇱"
   },
   {
-    "name": "Togo",
-    "dial_code": "+228",
-    "code": "TG",
-    "flag": "🇹🇬"
+    name: "Togo",
+    code: "+228",
+    countryCode: "TG",
+    flag: "🇹🇬"
   },
   {
-    "name": "Tokelau",
-    "dial_code": "+690",
-    "code": "TK",
-    "flag": "🇹🇰"
+    name: "Tokelau",
+    code: "+690",
+    countryCode: "TK",
+    flag: "🇹🇰"
   },
   {
-    "name": "Tonga",
-    "dial_code": "+676",
-    "code": "TO",
-    "flag": "🇹🇴"
+    name: "Tonga",
+    code: "+676",
+    countryCode: "TO",
+    flag: "🇹🇴"
   },
   {
-    "name": "Trinidad and Tobago",
-    "dial_code": "+1868",
-    "code": "TT",
-    "flag": "🇹🇹"
+    name: "Trinidad and Tobago",
+    code: "+1868",
+    countryCode: "TT",
+    flag: "🇹🇹"
   },
   {
-    "name": "Tunisia",
-    "dial_code": "+216",
-    "code": "TN",
-    "flag": "🇹🇳"
+    name: "Tunisia",
+    code: "+216",
+    countryCode: "TN",
+    flag: "🇹🇳"
   },
   {
-    "name": "Turkey",
-    "dial_code": "+90",
-    "code": "TR",
-    "flag": "🇹🇷"
+    name: "Turkey",
+    code: "+90",
+    countryCode: "TR",
+    flag: "🇹🇷"
   },
   {
-    "name": "Turkmenistan",
-    "dial_code": "+993",
-    "code": "TM",
-    "flag": "🇹🇲"
+    name: "Turkmenistan",
+    code: "+993",
+    countryCode: "TM",
+    flag: "🇹🇲"
   },
   {
-    "name": "Turks and Caicos Islands",
-    "dial_code": "+1649",
-    "code": "TC",
-    "flag": "🇹🇨"
+    name: "Turks and Caicos Islands",
+    code: "+1649",
+    countryCode: "TC",
+    flag: "🇹🇨"
   },
   {
-    "name": "Tuvalu",
-    "dial_code": "+688",
-    "code": "TV",
-    "flag": "🇹🇻"
+    name: "Tuvalu",
+    code: "+688",
+    countryCode: "TV",
+    flag: "🇹🇻"
   },
   {
-    "name": "Uganda",
-    "dial_code": "+256",
-    "code": "UG",
-    "flag": "🇺🇬"
+    name: "Uganda",
+    code: "+256",
+    countryCode: "UG",
+    flag: "🇺🇬"
   },
   {
-    "name": "Ukraine",
-    "dial_code": "+380",
-    "code": "UA",
-    "flag": "🇺🇦"
+    name: "Ukraine",
+    code: "+380",
+    countryCode: "UA",
+    flag: "🇺🇦"
   },
   {
-    "name": "United Arab Emirates",
-    "dial_code": "+971",
-    "code": "AE",
-    "flag": "🇦🇪"
+    name: "United Arab Emirates",
+    code: "+971",
+    countryCode: "AE",
+    flag: "🇦🇪"
   },
   {
-    "name": "United Kingdom",
-    "dial_code": "+44",
-    "code": "GB",
-    "flag": "🇬🇧"
+    name: "United Kingdom",
+    code: "+44",
+    countryCode: "GB",
+    flag: "🇬🇧"
   },
   {
-    "name": "United States",
-    "dial_code": "+1",
-    "code": "US",
-    "flag": "🇺🇸"
+    name: "United States",
+    code: "+1",
+    countryCode: "US",
+    flag: "🇺🇸"
   },
   {
-    "name": "Uruguay",
-    "dial_code": "+598",
-    "code": "UY",
-    "flag": "🇺🇾"
+    name: "Uruguay",
+    code: "+598",
+    countryCode: "UY",
+    flag: "🇺🇾"
   },
   {
-    "name": "Uzbekistan",
-    "dial_code": "+998",
-    "code": "UZ",
-    "flag": "🇺🇿"
+    name: "Uzbekistan",
+    code: "+998",
+    countryCode: "UZ",
+    flag: "🇺🇿"
   },
   {
-    "name": "Vanuatu",
-    "dial_code": "+678",
-    "code": "VU",
-    "flag": "🇻🇺"
+    name: "Vanuatu",
+    code: "+678",
+    countryCode: "VU",
+    flag: "🇻🇺"
   },
   {
-    "name": "Venezuela, Bolivarian Republic of",
-    "dial_code": "+58",
-    "code": "VE",
-    "flag": "🇻🇪"
+    name: "Venezuela, Bolivarian Republic of",
+    code: "+58",
+    countryCode: "VE",
+    flag: "🇻🇪"
   },
   {
-    "name": "Viet Nam",
-    "dial_code": "+84",
-    "code": "VN",
-    "flag": "🇻🇳"
+    name: "Viet Nam",
+    code: "+84",
+    countryCode: "VN",
+    flag: "🇻🇳"
   },
   {
-    "name": "Virgin Islands, British",
-    "dial_code": "+1284",
-    "code": "VG",
-    "flag": "🇻🇬"
+    name: "Virgin Islands, British",
+    code: "+1284",
+    countryCode: "VG",
+    flag: "🇻🇬"
   },
   {
-    "name": "Virgin Islands, U.S.",
-    "dial_code": "+1340",
-    "code": "VI",
-    "flag": "🇻🇮"
+    name: "Virgin Islands, U.S.",
+    code: "+1340",
+    countryCode: "VI",
+    flag: "🇻🇮"
   },
   {
-    "name": "Wallis and Futuna",
-    "dial_code": "+681",
-    "code": "WF",
-    "flag": "🇼🇫"
+    name: "Wallis and Futuna",
+    code: "+681",
+    countryCode: "WF",
+    flag: "🇼🇫"
   },
   {
-    "name": "Yemen",
-    "dial_code": "+967",
-    "code": "YE",
-    "flag": "🇾🇪"
+    name: "Yemen",
+    code: "+967",
+    countryCode: "YE",
+    flag: "🇾🇪"
   },
   {
-    "name": "Zambia",
-    "dial_code": "+260",
-    "code": "ZM",
-    "flag": "🇿🇲"
+    name: "Zambia",
+    code: "+260",
+    countryCode: "ZM",
+    flag: "🇿🇲"
   },
   {
-    "name": "Zimbabwe",
-    "dial_code": "+263",
-    "code": "ZW",
-    "flag": "🇿🇼"
+    name: "Zimbabwe",
+    code: "+263",
+    countryCode: "ZW",
+    flag: "🇿🇼"
   },
   {
-    "name": "Åland Islands",
-    "dial_code": "+358",
-    "code": "AX",
-    "flag": "🇦🇽"
+    name: "Åland Islands",
+    code: "+358",
+    countryCode: "AX",
+    flag: "🇦🇽"
   }
 ];
