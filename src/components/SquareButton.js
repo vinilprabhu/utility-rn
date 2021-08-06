@@ -1,10 +1,11 @@
 import React from 'react';
 import { Center, Icon, Pressable, Square, Text, VStack } from 'native-base';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
+import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 function SquareButton(props) {
   return (
     <Pressable
+      m={4}
       onPress={props.onPress}
     >
       <Square
@@ -15,9 +16,9 @@ function SquareButton(props) {
       >
         <VStack>
           <Center>
-            <Icon as={FAIcon} name={props.iconName} />
+            <Icon as={MCIcons} name={props.iconName} />
           </Center>
-          <Center>
+          <Center mt={2}>
             <Text>{props.buttonText}</Text>
           </Center>
         </VStack>

@@ -23,7 +23,7 @@ import { PhoneNumberUtil } from 'google-libphonenumber';
 import { countryCodes } from '../constants/countryCodes';
 import * as RNLocalize from "react-native-localize";
 import colors from '../constants/colors';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
+import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Linking, Share } from 'react-native';
 
 export const WhatsappLink = ({ navigation }) => {
@@ -128,7 +128,7 @@ export const WhatsappLink = ({ navigation }) => {
                   </FormControl>
 
                   <Button onPress={handleSubmit}
-                    startIcon={<Icon as={FAIcon} name="whatsapp" />}
+                    startIcon={<Icon as={MCIcons} name="whatsapp" />}
                     backgroundColor={colors.whatsappGreenColor}>
                     Open in Whatsapp
                   </Button>
@@ -147,7 +147,7 @@ export const WhatsappLink = ({ navigation }) => {
                     />
 
                     <Button onPress={() => errors == {} ? onShare(values) : null}
-                      startIcon={<Icon as={FAIcon} name="share-alt" />}
+                      startIcon={<Icon as={MCIcons} name="share-variant" />}
                       backgroundColor={colors.whatsappBlueColor}>
                       share link
                     </Button>
