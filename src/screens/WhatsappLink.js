@@ -79,7 +79,7 @@ export const WhatsappLink = ({ navigation }) => {
   const phoneNumberRef = useRef("phoneNumberRef");
 
   return (
-    <Center flex={1} backgroundColor="#cccccc">
+    <Center flex={1}>
       <Center>
         <VStack>
           <HStack
@@ -135,21 +135,23 @@ export const WhatsappLink = ({ navigation }) => {
 
                   <Divider />
 
-                  <FormControl.Label>share link with message</FormControl.Label>
+                  <VStack space={1}>
+                    <FormControl.Label>share link with message</FormControl.Label>
 
-                  <Input
-                    placeholder="message to share"
-                    variant="outline"
-                    onBlur={handleBlur('shareMessage')}
-                    onChangeText={handleChange('shareMessage')}
-                    value={values.shareMessage}
-                  />
+                    <Input
+                      placeholder="message to share"
+                      variant="outline"
+                      onBlur={handleBlur('shareMessage')}
+                      onChangeText={handleChange('shareMessage')}
+                      value={values.shareMessage}
+                    />
 
-                  <Button onPress={() => errors == {} ? onShare(values) : null}
-                    startIcon={<Icon as={FAIcon} name="share-alt" />}
-                    backgroundColor={colors.whatsappBlueColor}>
-                    share link
-                  </Button>
+                    <Button onPress={() => errors == {} ? onShare(values) : null}
+                      startIcon={<Icon as={FAIcon} name="share-alt" />}
+                      backgroundColor={colors.whatsappBlueColor}>
+                      share link
+                    </Button>
+                  </VStack>
                 </VStack>
               )}
             </Formik>
