@@ -10,7 +10,7 @@ function SquareButton(props) {
     >
       <Square
         p={4}
-        size='xl'
+        size={props.size ? props.size : 'xl'}
         shadow={2}
         rounded="lg"
       >

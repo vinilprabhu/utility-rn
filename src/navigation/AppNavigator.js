@@ -27,11 +27,11 @@ export const AppNavigator = () => (
         component={QrScanner}
         options={{ title: 'QR Scanner' }}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="QrGenerator"
         component={QrGenerator}
         options={{ title: 'QR Generator' }}
-      />
+      /> */}
     </Drawer.Navigator>
   </NavigationContainer>
 );

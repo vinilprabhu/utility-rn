@@ -1,12 +1,30 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
-import { Pressable, Text } from 'native-base';
-import { Linking, PermissionsAndroid, StyleSheet } from 'react-native';
+import { AlertDialog, Box, Button, HStack, Icon, IconButton, Modal, Spinner } from 'native-base';
+import { PermissionsAndroid, StyleSheet } from 'react-native';
 import WifiManager from "react-native-wifi-reborn";
+import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import emums from '../constants/emums';
 
-export const QrScanner = () => {
-  onSuccess = e => {
+export const QrScanner = ({ navigation }) => {
+
+  const [wifiConnectData, setWifiConnectData] = useState(null);
+
+  const [flashMode, setFlashMode] = useState("flash-off");
+  const [scannerFlashMode, setScannerFlashMode] = useState(RNCamera.Constants.FlashMode.off);
+
+  const [alertHeading, setAlertHeading] = useState("Scanning Result");
+  const [alertBody, setAlertBody] = useState("");
+  const [alertPrimaryButtonText, setAlertPrimaryButtonText] = useState("Share");
+  const [alertPrimaryButtonOnPressType, setAlertPrimaryButtonOnPressType] = useState(emums.ScannerAlertPrimaryButtonOnPressType.Share);
+
+  const [loading, setLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const qRCodeScannerRef = useRef("qRCodeScannerRef");
+
+  const onScanningSuccess = e => {
     const data = e.data;
     console.log({ data });
     if (data.startsWith("BEGIN:VCARD") || data.startsWith("MECARD:"))
@@ -24,30 +42,21 @@ export const QrScanner = () => {
   };
 
   const convertWifiStringToJson = (data) => {
-    let wifidata = `{${data}}`
-    console.log({ wifidata });
-    wifidata = wifidata.replace('WIFI:', '\"');
-    wifidata = wifidata.replace(';;', ';');
-    console.log({ wifidata });
-    wifidata = wifidata.replace(new RegExp(';', 'g'), '\",\"');
-    console.log({ wifidata });
-    wifidata = wifidata.replace(new RegExp(':', 'g'), '\":\"');
-    console.log({ wifidata });
-    wifidata = wifidata.replace(',\"}', '}');
-    console.log({ wifidata });
-    wifidata = JSON.parse(wifidata);
-    console.log({ wifidata });
-    return wifidata;
-  }
+    let wifiData = `{${data}}`
+    wifiData = wifiData.replace('WIFI:', '\"');
+    wifiData = wifiData.replace(';;', ';');
+    wifiData = wifiData.replace(new RegExp(';', 'g'), '\",\"');
+    wifiData = wifiData.replace(new RegExp(':', 'g'), '\":\"');
+    wifiData = wifiData.replace(',\"}', '}');
+    wifiData = JSON.parse(wifiData);
+    return wifiData;
+  };
 
-  const connectToWifi = async (wifidata) => {
+  const connectToWifi = async (wifiData) => {
     try {
-      const ssid = wifidata.S;
-      const password = wifidata.P;
-      const isWep = wifidata.T.toLowerCase() == "wep";
-      const isOpen = (wifidata.T.toLowerCase() == "nopass") || !password;
-
-      console.log({ ssid, password, isWep, isOpen });
+      const ssid = wifiData.S;
+      const password = wifiData.P;
+      const isWep = wifiData.T.toLowerCase() == "wep";
 
       const permissionsGranted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -61,10 +70,7 @@ export const QrScanner = () => {
       if (permissionsGranted === PermissionsAndroid.RESULTS.GRANTED) {
         console.log("Permissions GRANTED");
         try {
-          // if (isOpen)
-          //   await WifiManager.connectToSSID(ssid);
-          // else
-            await WifiManager.connectToProtectedSSID(ssid, password, isWep);
+          await WifiManager.connectToProtectedSSID(ssid, password, isWep);
           console.log("Connected successfully!");
         } catch (error) {
           console.error("Connection failed!", error);
@@ -84,39 +90,111 @@ export const QrScanner = () => {
     } catch (error) {
       console.error("connectToWifi", error);
     }
-  }
+  };
 
   const processwifiDataScan = async (data) => {
     try {
-      let wifidata = convertWifiStringToJson(data);
-      console.log({ wifidata });
-      connectToWifi(wifidata);
+      let wifiData = convertWifiStringToJson(data);
+      showWifiScannedAlert(wifiData);
     } catch (error) {
       console.error("processwifiDataScan", error);
     }
-  }
+  };
 
-  const qRCodeScannerRef = useRef("qRCodeScannerRef");
+  const showWifiScannedAlert = (wifiData) => {
+    console.log({ wifiData, alertPrimaryButtonOnPress: alertPrimaryButtonOnPressType })
+    setAlertHeading("Scanned Wifi");
+    setAlertBody(`SSID: ${wifiData.S}\nSecurity: ${wifiData.T}`);
+    setAlertPrimaryButtonText("Connect to Wifi");
+    setWifiConnectData(wifiData);
+    setAlertPrimaryButtonOnPressType(emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi)
+    setIsOpen(true);
+  };
+
+  const toggleFlash = () => {
+    if (flashMode == "flash-off") {
+      setFlashMode("flash");
+      setScannerFlashMode(RNCamera.Constants.FlashMode.torch);
+    }
+    else {
+      setFlashMode("flash-off");
+      setScannerFlashMode(RNCamera.Constants.FlashMode.off);
+    }
+  };
+
+  const onAlertClose = () => {
+    setIsOpen(false);
+    qRCodeScannerRef.current.reactivate();
+  };
+
+  const alertPrimaryButtonOnPress = async () => {
+    setIsOpen(false);
+    setLoading(true);
+    if (alertPrimaryButtonOnPressType == emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi) {
+      await connectToWifi(wifiConnectData);
+      console.log("connecting to wifi");
+    }
+    setLoading(false);
+    qRCodeScannerRef.current.reactivate();
+  };
 
   return (
-    <QRCodeScanner
-      onRead={onSuccess}
-      ref={qRCodeScannerRef}
-      flashMode={RNCamera.Constants.FlashMode.off}
-      showMarker
-      topContent={
-        <Text style={styles.centerText}>
-          Go to{' '}
-          <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text> on
-          your computer and scan the QR code.
-        </Text>
-      }
-      bottomContent={
-        <Pressable style={styles.buttonTouchable} onPress={() => qRCodeScannerRef.current.reactivate()}>
-          <Text style={styles.buttonText}>OK. Got it!</Text>
-        </Pressable >
-      }
-    />
+    <Box flex={1}>
+      <Modal
+        isOpen={loading}>
+        <Modal.Content>
+          <Modal.Body>
+            <Spinner size="lg" />
+          </Modal.Body>
+        </Modal.Content>
+      </Modal>
+      <AlertDialog
+        isOpen={isOpen}
+        onClose={onAlertClose}
+        motionPreset={"fade"}
+      >
+        <AlertDialog.Content>
+          <AlertDialog.Header fontSize="lg" fontWeight="bold">
+            {alertHeading}
+          </AlertDialog.Header>
+          <AlertDialog.Body>
+            {alertBody}
+          </AlertDialog.Body>
+          <AlertDialog.Footer>
+            <Button colorScheme="secondary" onPress={onAlertClose}>
+              Cancel
+            </Button>
+            <Button colorScheme="primary" onPress={alertPrimaryButtonOnPress} ml={3}>
+              {alertPrimaryButtonText}
+            </Button>
+          </AlertDialog.Footer>
+        </AlertDialog.Content>
+      </AlertDialog>
+      <QRCodeScanner
+        onRead={onScanningSuccess}
+        ref={qRCodeScannerRef}
+        flashMode={scannerFlashMode}
+        showMarker
+        topContent={
+          <HStack space='lg'>
+            <Box flex={1} />
+            <IconButton
+              onPress={toggleFlash}
+              variant="ghost"
+              icon={<Icon size="md" as={MCIcons} name={flashMode} color="black" />}
+            />
+          </HStack>
+        }
+        bottomContent={
+          <Button
+            onPress={() => navigation.navigate('Home')}
+            startIcon={<Icon size="sm" as={MCIcons} name="collage" />}
+          >
+            All Utilities
+          </Button>
+        }
+      />
+    </Box>
   )
 }
 
