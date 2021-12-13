@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, {useState, useRef} from 'react';
 import {
   Box,
   HStack,
@@ -18,93 +18,107 @@ import {
   Icon,
   Divider,
 } from 'native-base';
-import { Formik } from 'formik';
-import { PhoneNumberUtil } from 'google-libphonenumber';
-import { countryCodes } from '../constants/countryCodes';
-import * as RNLocalize from "react-native-localize";
+import {Formik} from 'formik';
+import {PhoneNumberUtil} from 'google-libphonenumber';
+import {countryCodes} from '../constants/countryCodes';
+import * as RNLocalize from 'react-native-localize';
 import colors from '../constants/colors';
 import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Linking, Share } from 'react-native';
+import {Linking, Share} from 'react-native';
 
-export const WhatsappLink = ({ navigation }) => {
-
+export const WhatsappLink = ({navigation}) => {
   const phoneUtil = PhoneNumberUtil.getInstance();
 
   const localCountryIdentifier = RNLocalize.getCountry();
-  let localCountryCode = countryCodes.find(item => item.identifier == localCountryIdentifier);
+  let localCountryCode = countryCodes.find(
+    item => item.identifier == localCountryIdentifier,
+  );
   localCountryCode = localCountryCode ? localCountryCode.code : null;
 
-  const onSubmit = (data) => {
-    let whatsappUrl = `https://wa.me/${data.countryCode.replace('+', '')}${data.phoneNumber}`;
+  const onSubmit = data => {
+    let whatsappUrl = `https://wa.me/${data.countryCode.replace('+', '')}${
+      data.phoneNumber
+    }`;
     console.log('submiting with ', whatsappUrl);
     Linking.openURL(whatsappUrl);
   };
 
-  const onShare = (data) => {
-    let shareMessage = `${data.shareMessage}${data.shareMessage ? '\n' : ''}https://wa.me/${data.countryCode.replace('+', '')}${data.phoneNumber}`
+  const onShare = data => {
+    let shareMessage = `${data.shareMessage}${
+      data.shareMessage ? '\n' : ''
+    }https://wa.me/${data.countryCode.replace('+', '')}${data.phoneNumber}`;
     console.log('sharing with ', shareMessage, data);
-    Share.share({ message: shareMessage })
+    Share.share({message: shareMessage});
   };
 
-  const validate = (values) => {
+  const validate = values => {
     try {
       const errors = {};
 
-      let countryIdentifier = countryCodes.find(item => item.code == values.countryCode);
-      countryIdentifier = countryIdentifier ? countryIdentifier.identifier : null;
+      let countryIdentifier = countryCodes.find(
+        item => item.code == values.countryCode,
+      );
+      countryIdentifier = countryIdentifier
+        ? countryIdentifier.identifier
+        : null;
 
       if (countryIdentifier) {
         try {
-          const parsedNumber = phoneUtil.parse(values.phoneNumber, countryIdentifier);
+          const parsedNumber = phoneUtil.parse(
+            values.phoneNumber,
+            countryIdentifier,
+          );
           if (!phoneUtil.isPossibleNumber(parsedNumber)) {
-            errors.combinedPhoneNumber = "Invalid phone number!"
-            errors.phoneNumber = "Invalid!"
+            errors.combinedPhoneNumber = 'Invalid phone number!';
+            errors.phoneNumber = 'Invalid!';
           }
         } catch (error) {
-          errors.combinedPhoneNumber = "Invalid phone number!"
-          errors.phoneNumber = "Invalid!"
+          errors.combinedPhoneNumber = 'Invalid phone number!';
+          errors.phoneNumber = 'Invalid!';
         }
-      }
-      else {
-        errors.combinedPhoneNumber = "Invalid country code!";
-        errors.countryCode = "Invalid!";
+      } else {
+        errors.combinedPhoneNumber = 'Invalid country code!';
+        errors.countryCode = 'Invalid!';
       }
 
       return errors;
     } catch (error) {
-      console.log({ error })
+      console.log({error});
     }
-  }
+  };
 
-  const phoneNumberRef = useRef("phoneNumberRef");
+  const phoneNumberRef = useRef('phoneNumberRef');
 
   return (
     <Center flex={1}>
       <Center>
         <VStack>
-          <HStack
-            w='80%'>
-            <Formik initialValues={{ countryCode: localCountryCode, phoneNumber: '', shareMessage: '' }} onSubmit={onSubmit} validate={validate}>
-              {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
+          <HStack w="80%">
+            <Formik
+              initialValues={{
+                countryCode: localCountryCode,
+                phoneNumber: '',
+                shareMessage: '',
+              }}
+              onSubmit={onSubmit}
+              validate={validate}>
+              {({handleChange, handleBlur, handleSubmit, values, errors}) => (
                 <VStack width="80%" space={4}>
-
-                  <FormControl
-                    isInvalid={'combinedPhoneNumber' in errors}
-                  >
+                  <FormControl isInvalid={'combinedPhoneNumber' in errors}>
                     <FormControl.Label>Number to start chat</FormControl.Label>
 
                     <HStack>
                       <Input
                         variant="outline"
-                        keyboardType='phone-pad'
+                        keyboardType="phone-pad"
                         onBlur={handleBlur('countryCode')}
-                        onChangeText={(text) => {
+                        onChangeText={text => {
                           const countryCode = '+' + text.replace(/[^0-9]/g, '');
                           handleChange('countryCode')(countryCode);
                         }}
                         value={values.countryCode}
                         autoFocus={true}
-                        returnKeyType={"next"}
+                        returnKeyType={'next'}
                         onSubmitEditing={() => phoneNumberRef.current.focus()}
                       />
                       <Input
@@ -112,9 +126,9 @@ export const WhatsappLink = ({ navigation }) => {
                         ref={phoneNumberRef}
                         placeholder="Phone"
                         variant="outline"
-                        keyboardType='phone-pad'
+                        keyboardType="phone-pad"
                         onBlur={handleBlur('phoneNumber')}
-                        onChangeText={(text) => {
+                        onChangeText={text => {
                           const phoneNumber = text.replace(/[^0-9]/g, '');
                           handleChange('phoneNumber')(phoneNumber);
                         }}
@@ -127,7 +141,8 @@ export const WhatsappLink = ({ navigation }) => {
                     </FormControl.ErrorMessage>
                   </FormControl>
 
-                  <Button onPress={handleSubmit}
+                  <Button
+                    onPress={handleSubmit}
                     startIcon={<Icon as={MCIcons} name="whatsapp" />}
                     backgroundColor={colors.whatsappGreenColor}>
                     Open in Whatsapp
@@ -136,7 +151,9 @@ export const WhatsappLink = ({ navigation }) => {
                   <Divider />
 
                   <VStack space={1}>
-                    <FormControl.Label>share link with message</FormControl.Label>
+                    <FormControl.Label>
+                      share link with message
+                    </FormControl.Label>
 
                     <Input
                       placeholder="message to share"
@@ -146,7 +163,8 @@ export const WhatsappLink = ({ navigation }) => {
                       value={values.shareMessage}
                     />
 
-                    <Button onPress={() => errors == {} ? onShare(values) : null}
+                    <Button
+                      onPress={() => (errors === {} ? onShare(values) : null)}
                       startIcon={<Icon as={MCIcons} name="share-variant" />}
                       backgroundColor={colors.whatsappBlueColor}>
                       share link
@@ -158,6 +176,6 @@ export const WhatsappLink = ({ navigation }) => {
           </HStack>
         </VStack>
       </Center>
-    </Center >
+    </Center>
   );
 };
