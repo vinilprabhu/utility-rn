@@ -1,79 +1,92 @@
-import React, { useRef, useState } from 'react'
+import React, {useRef, useState} from 'react';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import { RNCamera } from 'react-native-camera';
-import { AlertDialog, Box, Button, HStack, Icon, IconButton, Modal, Spinner } from 'native-base';
-import { PermissionsAndroid, StyleSheet } from 'react-native';
-import WifiManager from "react-native-wifi-reborn";
+import {RNCamera} from 'react-native-camera';
+import {
+  AlertDialog,
+  Box,
+  Button,
+  HStack,
+  Icon,
+  IconButton,
+  Modal,
+  Spinner,
+} from 'native-base';
+import {PermissionsAndroid, StyleSheet} from 'react-native';
+import WifiManager from 'react-native-wifi-reborn';
 import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import emums from '../constants/emums';
 
-export const QrScanner = ({ navigation }) => {
-
+export const QrScanner = ({navigation}) => {
   const [wifiConnectData, setWifiConnectData] = useState(null);
 
-  const [flashMode, setFlashMode] = useState("flash-off");
-  const [scannerFlashMode, setScannerFlashMode] = useState(RNCamera.Constants.FlashMode.off);
+  const [flashMode, setFlashMode] = useState('flash-off');
+  const [scannerFlashMode, setScannerFlashMode] = useState(
+    RNCamera.Constants.FlashMode.off,
+  );
 
-  const [alertHeading, setAlertHeading] = useState("Scanning Result");
-  const [alertBody, setAlertBody] = useState("");
-  const [alertPrimaryButtonText, setAlertPrimaryButtonText] = useState("Share");
-  const [alertPrimaryButtonOnPressType, setAlertPrimaryButtonOnPressType] = useState(emums.ScannerAlertPrimaryButtonOnPressType.Share);
+  const [alertHeading, setAlertHeading] = useState('Scanning Result');
+  const [alertBody, setAlertBody] = useState('');
+  const [alertPrimaryButtonText, setAlertPrimaryButtonText] = useState('Share');
+  const [alertPrimaryButtonOnPressType, setAlertPrimaryButtonOnPressType] =
+    useState(emums.ScannerAlertPrimaryButtonOnPressType.Share);
 
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const qRCodeScannerRef = useRef("qRCodeScannerRef");
+  const qRCodeScannerRef = useRef('qRCodeScannerRef');
 
   const onScanningSuccess = e => {
     const data = e.data;
-    console.log({ data });
-    if (data.startsWith("BEGIN:VCARD") || data.startsWith("MECARD:"))
-      console.log("contact", data);
-    else if (data.toLowerCase().startsWith("http://") || data.toLowerCase().startsWith("https://"))
-      console.log("url", data);
-    else if (data.toLowerCase().startsWith("mailto:"))
-      console.log("email", data);
-    else if (data.toLowerCase().startsWith("matmsg:"))
-      console.log("email with data", data);
-    else if (data.toLowerCase().startsWith("smsto:"))
-      console.log("sms", data);
-    else if (data.toLowerCase().startsWith("wifi:"))
+    if (data.startsWith('BEGIN:VCARD') || data.startsWith('MECARD:')) {
+      console.log('contact', data);
+    } else if (
+      data.toLowerCase().startsWith('http://') ||
+      data.toLowerCase().startsWith('https://')
+    ) {
+      console.log('url', data);
+    } else if (data.toLowerCase().startsWith('mailto:')) {
+      console.log('email', data);
+    } else if (data.toLowerCase().startsWith('matmsg:')) {
+      console.log('email with data', data);
+    } else if (data.toLowerCase().startsWith('smsto:')) {
+      console.log('sms', data);
+    } else if (data.toLowerCase().startsWith('wifi:')) {
       processwifiDataScan(data);
+    }
   };
 
-  const convertWifiStringToJson = (data) => {
-    let wifiData = `{${data}}`
-    wifiData = wifiData.replace('WIFI:', '\"');
+  const convertWifiStringToJson = data => {
+    let wifiData = `{${data}}`;
+    wifiData = wifiData.replace('WIFI:', '"');
     wifiData = wifiData.replace(';;', ';');
-    wifiData = wifiData.replace(new RegExp(';', 'g'), '\",\"');
-    wifiData = wifiData.replace(new RegExp(':', 'g'), '\":\"');
-    wifiData = wifiData.replace(',\"}', '}');
+    wifiData = wifiData.replace(new RegExp(';', 'g'), '","');
+    wifiData = wifiData.replace(new RegExp(':', 'g'), '":"');
+    wifiData = wifiData.replace(',"}', '}');
     wifiData = JSON.parse(wifiData);
     return wifiData;
   };
 
-  const connectToWifi = async (wifiData) => {
+  const connectToWifi = async wifiData => {
     try {
       const ssid = wifiData.S;
       const password = wifiData.P;
-      const isWep = wifiData.T.toLowerCase() == "wep";
+      const isWep = wifiData.T.toLowerCase() == 'wep';
 
       const permissionsGranted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
         {
           title: 'Location permission is required for WiFi connections',
-          message: 'This app needs location permission as this is required to scan for wifi networks.',
+          message:
+            'This app needs location permission as this is required to scan for wifi networks.',
           buttonNegative: 'DENY',
           buttonPositive: 'ALLOW',
         },
       );
       if (permissionsGranted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("Permissions GRANTED");
         try {
           await WifiManager.connectToProtectedSSID(ssid, password, isWep);
-          console.log("Connected successfully!");
         } catch (error) {
-          console.error("Connection failed!", error);
+          console.error('Connection failed!', error);
         }
 
         // WifiManager.getCurrentWifiSSID().then(
@@ -85,39 +98,39 @@ export const QrScanner = ({ navigation }) => {
         //   }
         // );
       } else {
-        console.error("Permission denied");
+        console.error('Permission denied');
       }
     } catch (error) {
-      console.error("connectToWifi", error);
+      console.error('connectToWifi', error);
     }
   };
 
-  const processwifiDataScan = async (data) => {
+  const processwifiDataScan = async data => {
     try {
       let wifiData = convertWifiStringToJson(data);
       showWifiScannedAlert(wifiData);
     } catch (error) {
-      console.error("processwifiDataScan", error);
+      console.error('processwifiDataScan', error);
     }
   };
 
-  const showWifiScannedAlert = (wifiData) => {
-    console.log({ wifiData, alertPrimaryButtonOnPress: alertPrimaryButtonOnPressType })
-    setAlertHeading("Scanned Wifi");
+  const showWifiScannedAlert = wifiData => {
+    setAlertHeading('Scanned Wifi');
     setAlertBody(`SSID: ${wifiData.S}\nSecurity: ${wifiData.T}`);
-    setAlertPrimaryButtonText("Connect to Wifi");
+    setAlertPrimaryButtonText('Connect to Wifi');
     setWifiConnectData(wifiData);
-    setAlertPrimaryButtonOnPressType(emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi)
+    setAlertPrimaryButtonOnPressType(
+      emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi,
+    );
     setIsOpen(true);
   };
 
   const toggleFlash = () => {
-    if (flashMode == "flash-off") {
-      setFlashMode("flash");
+    if (flashMode == 'flash-off') {
+      setFlashMode('flash');
       setScannerFlashMode(RNCamera.Constants.FlashMode.torch);
-    }
-    else {
-      setFlashMode("flash-off");
+    } else {
+      setFlashMode('flash-off');
       setScannerFlashMode(RNCamera.Constants.FlashMode.off);
     }
   };
@@ -130,9 +143,11 @@ export const QrScanner = ({ navigation }) => {
   const alertPrimaryButtonOnPress = async () => {
     setIsOpen(false);
     setLoading(true);
-    if (alertPrimaryButtonOnPressType == emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi) {
+    if (
+      alertPrimaryButtonOnPressType ==
+      emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi
+    ) {
       await connectToWifi(wifiConnectData);
-      console.log("connecting to wifi");
     }
     setLoading(false);
     qRCodeScannerRef.current.reactivate();
@@ -140,31 +155,27 @@ export const QrScanner = ({ navigation }) => {
 
   return (
     <Box flex={1}>
-      <Modal
-        isOpen={loading}>
+      <Modal isOpen={loading}>
         <Modal.Content>
           <Modal.Body>
             <Spinner size="lg" />
           </Modal.Body>
         </Modal.Content>
       </Modal>
-      <AlertDialog
-        isOpen={isOpen}
-        onClose={onAlertClose}
-        motionPreset={"fade"}
-      >
+      <AlertDialog isOpen={isOpen} onClose={onAlertClose} motionPreset={'fade'}>
         <AlertDialog.Content>
           <AlertDialog.Header fontSize="lg" fontWeight="bold">
             {alertHeading}
           </AlertDialog.Header>
-          <AlertDialog.Body>
-            {alertBody}
-          </AlertDialog.Body>
+          <AlertDialog.Body>{alertBody}</AlertDialog.Body>
           <AlertDialog.Footer>
             <Button colorScheme="secondary" onPress={onAlertClose}>
               Cancel
             </Button>
-            <Button colorScheme="primary" onPress={alertPrimaryButtonOnPress} ml={3}>
+            <Button
+              colorScheme="primary"
+              onPress={alertPrimaryButtonOnPress}
+              ml={3}>
               {alertPrimaryButtonText}
             </Button>
           </AlertDialog.Footer>
@@ -176,44 +187,45 @@ export const QrScanner = ({ navigation }) => {
         flashMode={scannerFlashMode}
         showMarker
         topContent={
-          <HStack space='lg'>
+          <HStack space="lg">
             <Box flex={1} />
             <IconButton
               onPress={toggleFlash}
               variant="ghost"
-              icon={<Icon size="md" as={MCIcons} name={flashMode} color="black" />}
+              icon={
+                <Icon size="md" as={MCIcons} name={flashMode} color="black" />
+              }
             />
           </HStack>
         }
         bottomContent={
           <Button
             onPress={() => navigation.navigate('Home')}
-            startIcon={<Icon size="sm" as={MCIcons} name="collage" />}
-          >
+            startIcon={<Icon size="sm" as={MCIcons} name="collage" />}>
             All Utilities
           </Button>
         }
       />
     </Box>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   centerText: {
     flex: 1,
     fontSize: 18,
     padding: 32,
-    color: '#777'
+    color: '#777',
   },
   textBold: {
     fontWeight: '500',
-    color: '#000'
+    color: '#000',
   },
   buttonText: {
     fontSize: 21,
-    color: 'rgb(0,122,255)'
+    color: 'rgb(0,122,255)',
   },
   buttonTouchable: {
-    padding: 16
-  }
+    padding: 16,
+  },
 });

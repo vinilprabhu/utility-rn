@@ -1,6 +1,6 @@
 import React from 'react';
-import { NativeBaseProvider, extendTheme, Text } from 'native-base';
-import { AppNavigator } from './navigation/AppNavigator';
+import {NativeBaseProvider, extendTheme} from 'native-base';
+import {AppNavigator} from './navigation/AppNavigator';
 
 export default function () {
   const theme = extendTheme({

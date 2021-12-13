@@ -4,3 +4,5 @@ https://github.com/oblador/react-native-vector-icons#installation
 
 permissions_path = '../node_modules/react-native-permissions/ios'
 pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+
+wifi string: WIFI:T:WPA;P:8390155564;S:FTTH-BSNL;H:false;
