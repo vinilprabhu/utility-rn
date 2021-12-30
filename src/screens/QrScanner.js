@@ -14,7 +14,7 @@ import {
 import {PermissionsAndroid, StyleSheet} from 'react-native';
 import WifiManager from 'react-native-wifi-reborn';
 import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import emums from '../constants/emums';
+import enums from '../common/enums';
 
 export const QrScanner = ({navigation}) => {
   const [wifiConnectData, setWifiConnectData] = useState(null);
@@ -28,7 +28,7 @@ export const QrScanner = ({navigation}) => {
   const [alertBody, setAlertBody] = useState('');
   const [alertPrimaryButtonText, setAlertPrimaryButtonText] = useState('Share');
   const [alertPrimaryButtonOnPressType, setAlertPrimaryButtonOnPressType] =
-    useState(emums.ScannerAlertPrimaryButtonOnPressType.Share);
+    useState(enums.ScannerAlertPrimaryButtonOnPressType.Share);
 
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -120,7 +120,7 @@ export const QrScanner = ({navigation}) => {
     setAlertPrimaryButtonText('Connect to Wifi');
     setWifiConnectData(wifiData);
     setAlertPrimaryButtonOnPressType(
-      emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi,
+      enums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi,
     );
     setIsOpen(true);
   };
@@ -145,7 +145,7 @@ export const QrScanner = ({navigation}) => {
     setLoading(true);
     if (
       alertPrimaryButtonOnPressType ==
-      emums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi
+      enums.ScannerAlertPrimaryButtonOnPressType.ConnectToWifi
     ) {
       await connectToWifi(wifiConnectData);
     }

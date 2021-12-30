@@ -1,17 +1,8 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import {
-  Box,
   HStack,
   VStack,
-  Text,
-  Pressable,
-  Image,
-  View,
-  Spinner,
-  Heading,
   Center,
-  Select,
-  CheckIcon,
   Input,
   FormControl,
   Button,
@@ -20,18 +11,18 @@ import {
 } from 'native-base';
 import {Formik} from 'formik';
 import {PhoneNumberUtil} from 'google-libphonenumber';
-import {countryCodes} from '../constants/countryCodes';
+import {countryCodes} from '../common/countryCodes';
 import * as RNLocalize from 'react-native-localize';
-import colors from '../constants/colors';
 import MCIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Linking, Share} from 'react-native';
+import colors from '../common/colors';
 
 export const WhatsappLink = ({navigation}) => {
   const phoneUtil = PhoneNumberUtil.getInstance();
 
   const localCountryIdentifier = RNLocalize.getCountry();
   let localCountryCode = countryCodes.find(
-    item => item.identifier == localCountryIdentifier,
+    item => item.identifier === localCountryIdentifier,
   );
   localCountryCode = localCountryCode ? localCountryCode.code : null;
 
@@ -56,7 +47,7 @@ export const WhatsappLink = ({navigation}) => {
       const errors = {};
 
       let countryIdentifier = countryCodes.find(
-        item => item.code == values.countryCode,
+        item => item.code === values.countryCode,
       );
       countryIdentifier = countryIdentifier
         ? countryIdentifier.identifier

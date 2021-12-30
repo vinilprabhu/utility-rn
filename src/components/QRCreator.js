@@ -35,12 +35,9 @@ function QRCreator(props) {
   return (
     <Center>
       <Center width="70%">
-        <QRCode
-          getRef={c => (qrCodeRef = c)}
-          value={value}
-          ecl="H"
-          size={200}
-        />
+        <Box p={2} backgroundColor="white">
+          <QRCode getRef={c => (qrCodeRef = c)} value={value} size={300} />
+        </Box>
         <Button
           onPress={() => qrCodeRef.toDataURL(shareQrCode)}
           width="60%"

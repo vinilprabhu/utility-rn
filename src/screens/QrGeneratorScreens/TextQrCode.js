@@ -1,7 +1,6 @@
-import {Center, Input, Text, VStack} from 'native-base';
+import {Center, Input, VStack} from 'native-base';
 import React, {useState} from 'react';
 import QRCreator from '../../components/QRCreator';
-import colors from '../../constants/colors';
 
 export const TextQrCode = () => {
   const [text, setText] = useState('');
@@ -10,7 +9,7 @@ export const TextQrCode = () => {
 
   return (
     <VStack m={2}>
-      <Center m={2}>
+      <Center m={5} mb={10}>
         <Input
           placeholder="Add text here"
           w="70%"
